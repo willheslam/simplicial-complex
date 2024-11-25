@@ -195,7 +195,7 @@ exports.incidence = incidence
 //Computes the dual of the mesh.  This is basically an optimized version of buildIndex for the situation where from_cells is just the list of vertices
 function dual(cells, vertex_count) {
   if(!vertex_count) {
-    return incidence(unique(skeleton(cells, 0)), cells, 0)
+    return incidence(unique(skeleton(cells, 0)), cells)
   }
   var res = new Array(vertex_count)
   for(var i=0; i<vertex_count; ++i) {
